@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laksh Kathrotiya</title>
+  <meta name="description" content="Laksh Kathrotiya — personal website, projects and contact." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="sparks" aria-hidden="true"></canvas>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#top" class="logo">LK</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="orb" aria-hidden="true"></div>
+      <p class="eyebrow">Hello, I'm</p>
+      <h1 class="glow-text" data-text="Laksh Kathrotiya">Laksh Kathrotiya</h1>
+      <p class="tagline">
+        <span id="typed">Developer</span><span class="caret">|</span>
+      </p>
+      <div class="actions">
+        <a href="#projects" class="btn btn-glow">See my work</a>
+        <a href="#contact" class="btn btn-ghost">Say hello</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section reveal">
+      <h2 class="section-title">About me</h2>
+      <div class="card glow-border">
+        <p>
+          I'm Laksh — I love building things for the web and turning ideas into clean,
+          fast, and fun experiences. I'm always learning something new, from design to code.
+        </p>
+        <ul class="skills">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Python</li><li>UI Design</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section reveal">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid">
+        <article class="card glow-border tilt">
+          <span class="icon">⛅</span>
+          <h3>Weather App</h3>
+          <p>Real-time weather for any city: current conditions, temperature, humidity, wind and a multi-day forecast, all in a clean, responsive interface.</p>
+          <ul class="tags"><li>Weather API</li><li>JavaScript</li><li>Responsive UI</li></ul>
+          <a href="#" class="link">View project →</a>
+        </article>
+        <article class="card glow-border tilt">
+          <span class="icon">⚽</span>
+          <h3>LaLiga Score App</h3>
+          <p>Follow Spain's top football league with live match scores, fixtures, results and the up-to-date LaLiga standings table.</p>
+          <ul class="tags"><li>Live Scores</li><li>Football API</li><li>JavaScript</li></ul>
+          <a href="#" class="link">View project →</a>
+        </article>
+        <article class="card glow-border tilt">
+          <span class="icon">🚆</span>
+          <h3>Train Live Location API</h3>
+          <p>An API that tracks trains in real time, returning each train's current location, running status, next station and delays for apps to consume.</p>
+          <ul class="tags"><li>REST API</li><li>Real-time</li><li>Backend</li></ul>
+          <a href="#" class="link">View project →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
+      <h2 class="section-title">Get in touch</h2>
+      <form class="card glow-border contact" name="contact" method="POST"
+            data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+        <label>Name<input type="text" name="name" required autocomplete="name" /></label>
+        <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+        <label>Message<textarea name="message" rows="4" required></textarea></label>
+        <button type="submit" class="btn btn-glow">Send message</button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+      <div class="socials">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Laksh Kathrotiya · Made with <span class="heart">♥</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
